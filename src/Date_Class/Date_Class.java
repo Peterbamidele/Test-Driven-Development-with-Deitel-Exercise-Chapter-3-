@@ -5,11 +5,12 @@ import java.util.Random;
 public class Date_Class {
 
     public Random scanner;
-    private int month = 12;
-    private int day =31;
+    private int month ;
+    private int day ;
     private int year;
 
-    public Date_Class(int month, int day, int year){
+
+    public Date_Class(int month, int day, int year) {
         this.month = month;
         this.day = day;
         this.year = year;
@@ -17,25 +18,43 @@ public class Date_Class {
     }
 
     public void setMonth(int month) {
-        this.month = month;
+        if(month <= 12) {
+            this.month = month;
+
+        }
+        else {
+            throw new IllegalArgumentException("Month should not be greater than 12");
+        }
     }
 
     public void setDay(int day) {
-        this.day = day;
+        if (day <= 31)
+            this.day = day;
+        else {
+
+            throw new IllegalArgumentException("day should not be greater than 31");
+        }
     }
 
     public void setYear(int year) {
+         if(year <= 0)
+       throw new IllegalArgumentException("Year is not be 000 ");
+
         this.year = year;
     }
 
     public int getmonth() {
+
         return month;
     }
     public int getday() {
+
         return day;
     }
 
     public int getyear() {
+
+
         return year;
     }
 

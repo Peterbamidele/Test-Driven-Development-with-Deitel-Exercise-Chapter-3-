@@ -48,10 +48,15 @@ public class TargetHeartRateCalculator {
     }
 
     public void setdateOfBirth(int dateOfBirth) {
-        this. dateOfBirth = dateOfBirth;
+        this.dateOfBirth = dateOfBirth;
     }
 
-    public void setheight(double height) {
+    public int getdateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setheight(double height)
+    {
         this.height = height;
     }
 
@@ -59,5 +64,4 @@ public class TargetHeartRateCalculator {
         return height;
     }
 
-
-}
+    }

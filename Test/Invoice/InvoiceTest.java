@@ -11,13 +11,15 @@ class InvoiceTest {
 
     @BeforeEach
     void setUp() {
-       invoice = new Invoice("No:Tse1254","Fridge",1,2500.00);
+       invoice = new Invoice("Tv",10,3000,"No:WER456");
     }
 
     @AfterEach
     void tearDown() {
          invoice = null;
     }
+
+
     @Test
     void TestIfInvoiceHasAPartNumber(){
         invoice.setpartNumber("partNumber");
@@ -31,17 +33,23 @@ class InvoiceTest {
     }
     @Test
     void TestIfInvoiceHasAQuantityOfTheItemBeingPurchased(){
-        invoice.setQuantityItemBeingPurchased(1200);
-        assertEquals(1200,invoice.getQuantityItemBeingPurchased());;
+       invoice.setQuantityItemBeingPurchased(2000);
+        assertEquals(2000,invoice.getQuantityItemBeingPurchased());
+
     }
 
     @Test
     void TestIfInvoiceHasAPricePerItem(){
-        invoice.setpricePerItem(2.00);
-        assertEquals(2.00,invoice.getpricePerItem());
+        invoice.setpricePerItem(00.00);
+        assertEquals(00.00,invoice.getInvoiceAmount());
     }
 
 
-
+    @Test
+    void checkIfInvoiceAmountThatCalculatesTheInvoiceAmount(){
+        invoice.setpricePerItem(2000);
+        invoice.setQuantityItemBeingPurchased(10);
+        assertEquals(20000,invoice.getInvoiceAmount());
+    }
 
 }

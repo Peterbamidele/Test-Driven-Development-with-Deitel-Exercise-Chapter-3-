@@ -35,8 +35,9 @@ class TargetHeartRateCalculatorTest {
 
     @Test
     void CheckTargetHeartRateCalculatorHasDateOfBirth() {
-        targetHeartRateCalculator.setdateOfBirth(20/10/2021);
-        assertEquals(20/10/2021, targetHeartRateCalculator.getfirstName());
+        targetHeartRateCalculator.setdateOfBirth(20102021);
+        assertEquals(20102021,targetHeartRateCalculator.getdateOfBirth());
+//        assertEquals(20102021),targetHeartRateCalculator.getfirstName());
     }
 
     @Test
